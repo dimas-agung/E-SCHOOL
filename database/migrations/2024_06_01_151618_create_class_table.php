@@ -13,8 +13,8 @@ return new class extends Migration
     {
         Schema::create('class', function (Blueprint $table) {
             $table->id();
-            $table->unsignedBigInteger('class_group_id')->unique();
-            $table->unsignedBigInteger('teacher_id')->unique();
+            $table->unsignedBigInteger('class_group_id');
+            $table->unsignedBigInteger('teacher_id');
             $table->string('name');
             $table->text('description');
             $table->string('status');

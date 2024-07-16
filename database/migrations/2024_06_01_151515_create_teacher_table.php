@@ -21,6 +21,7 @@ return new class extends Migration
             $table->string('birth_place');
             $table->string('gender');
             $table->string('religion');
+            $table->string('phone_number');
             $table->text('address');
             $table->string('status');
             $table->integer('is_active')->default(1);

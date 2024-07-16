@@ -20,19 +20,19 @@ class UserSeeder extends Seeder
             'email' => 'admin@email.com',
             'password' => Hash::make('admin123'),
         ]);
-        $teacher = User::create([
-            'name' => 'Teacher',
-            'email' => 'teacher@email.com',
-            'password' => Hash::make('teacher123'),
-        ]);
-        $student = User::create([
-            'name' => 'student',
-            'email' => 'student@email.com',
-            'password' => Hash::make('student123'),
-        ]);
-
         $admin->assignRole(['admin']);
-        $teacher->assignRole(['teacher']);
-        $student->assignRole(['student']);
+        // $teacher = User::create([
+        //     'name' => 'Teacher',
+        //     'email' => 'teacher@email.com',
+        //     'password' => Hash::make('teacher123'),
+        // ]);
+        // $student = User::create([
+        //     'name' => 'student',
+        //     'email' => 'student@email.com',
+        //     'password' => Hash::make('student123'),
+        // ]);
+
+        // $teacher->assignRole(['teacher']);
+        // $student->assignRole(['student']);
     }
 }

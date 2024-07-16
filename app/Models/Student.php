@@ -11,15 +11,14 @@ class Student extends Model
     protected $table = 'student';
     protected $fillable = [
         'user_id',
-        'nip',
-        'nuptk',
+        'class_id',
+        'nis',
+        'nisn',
         'name',
         'birth',
         'birth_place',
-        'waktu_penyebaran',
         'gender',
         'religion',
-        'keterangan',
         'address',
         'phone_number',
         'status',

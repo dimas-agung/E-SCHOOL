@@ -11,12 +11,17 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('course', function (Blueprint $table) {
+        Schema::create('school_timetable', function (Blueprint $table) {
             $table->id();
-            $table->unsignedBigInteger('class_group_id');
+            $table->unsignedBigInteger('cource_id');
+            $table->unsignedBigInteger('class_id');
             $table->unsignedBigInteger('teacher_id');
-            $table->string('name');
-            $table->text('description');
+            $table->string('day');
+            $table->string('time_sequence');
+            $table->string('start_time');
+            $table->string('end_time');
+            $table->string('semester');
+            $table->integer('year');
             $table->string('status');
             $table->integer('is_active')->default(1);
             $table->timestamps();
@@ -28,6 +33,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('course');
+        Schema::dropIfExists('school_timetable');
     }
 };

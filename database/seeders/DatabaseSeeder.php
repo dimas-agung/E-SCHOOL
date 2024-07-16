@@ -2,6 +2,7 @@
 
 namespace Database\Seeders;
 
+use App\Models\GradeClass;
 use App\Models\User;
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
@@ -18,5 +19,10 @@ class DatabaseSeeder extends Seeder
 
         $this->call(RoleSeeder::class);
         $this->call(UserSeeder::class);
+        $this->call(ClassGroupSeeder::class);
+        $this->call(TeacherSeeder::class);
+        $this->call(ClassSeeder::class);
+        $this->call(StudentSeeder::class);
+
     }
 }

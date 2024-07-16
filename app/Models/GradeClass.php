@@ -18,4 +18,12 @@ class GradeClass extends Model
         'is_active',
         'join_date',
     ];
+
+    public function class_group(){
+        return $this->hasOne(ClassGroup::class, 'id', 'class_group_id');
+    }
+    public function teacher(){
+        return $this->hasOne(Teacher::class, 'id', 'teacher_id');
+    }
+
 }
